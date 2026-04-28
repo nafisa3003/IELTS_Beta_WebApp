@@ -22,7 +22,7 @@ require_once '../includes/config.php';
     <div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="password" placeholder="••••••••" autocomplete="current-password"></div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
       <label style="font-size:13px;color:var(--text2);display:flex;align-items:center;gap:6px;cursor:pointer;"><input type="checkbox" id="remember" style="accent-color:var(--teal);"> Remember me</label>
-      <a class="alink" style="font-size:13px;">Forgot password?</a>
+      <a class="alink" style="font-size:13px;cursor:pointer;" onclick="forgotPassword()">Forgot password?</a>
     </div>
     <button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px;" onclick="doLogin()">Log in →</button>
     <div class="auth-footer">No account? <a class="alink" href="signup.php">Sign up free</a></div>

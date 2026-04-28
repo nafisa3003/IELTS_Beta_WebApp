@@ -66,6 +66,23 @@ async function doLogin() {
     }
   }
 }
+/* ── FORGOT PASSWORD ────────────────────────── */
+async function forgotPassword() {
+  clearError();
+  const email = document.getElementById('email')?.value.trim();
+
+  if (!email) {
+    showError('Please enter your email address first.');
+    return;
+  }
+
+  try {
+    await fbAuth.sendPasswordResetEmail(email);
+    alert('Password reset email sent! Please check your inbox.');
+  } catch (e) {
+    showError(e.message || 'Failed to send reset email.');
+  }
+}
 
 /* ── EMAIL SIGNUP ───────────────────────────── */
 let selectedBand = 7.0;
