@@ -87,7 +87,11 @@ async function forgotPassword() {
 
   try {
     await fbAuth.sendPasswordResetEmail(email);
-    alert('Password reset email sent! Please check your inbox.');
+    if (typeof Toast !== 'undefined') {
+      Toast.show('Reset email sent! Check your inbox (and spam folder).', 'success');
+  } else {
+      alert('Password reset email sent! Please check your inbox and your spam folder.');
+}
   } catch (e) {
     showError(e.message || 'Failed to send reset email.');
   }
