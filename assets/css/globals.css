@@ -274,9 +274,22 @@ select.fi { cursor: pointer; }
   .app-main { margin-left: 64px; padding: 16px; }
   .grid4 { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 640px) {
+  .menu-toggle { display: block !important; }
   .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
   .app-main { margin-left: 0; padding: 12px; }
-  .sidebar { display: none; }
-  .top-nav .tnav:not(.cta):not(.outline) { display: none; }
+  .sidebar { 
+      display: flex; 
+      transform: translateX(-100%); 
+      width: 260px; 
+      transition: transform 0.3s ease; 
+      box-shadow: 10px 0 30px rgba(0,0,0,0.2);
+      }
+      .sidebar.show { transform: translateX(0); }
+      .sb-link span:not(.sb-icon):not(.sb-badge),
+      .sb-logo-img, .sb-sec,
+      .sb-user .uname, .sb-user .urole { display: flex !important; }
+      .sb-link { justify-content: flex-start; }
+      .top-nav { display: none !important; }
 }

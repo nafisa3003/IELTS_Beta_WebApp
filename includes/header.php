@@ -46,6 +46,8 @@ if ($user) {
 
 <?php if ($show_topbar): ?>
 <nav class="topbar">
+  <button class="menu-toggle" id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:24px; cursor:pointer;
+         margin-right:15px;">☰</button>
   <a href="/ielts_beta_v3/pages/home.php">
     <img src="/ielts_beta_v3/assets/img/logo-dark.png" class="logo-img" alt="IELTS Beta"
          onerror="this.outerHTML='<span style=&quot;font-family:var(--font);font-weight:800;font-size:18px;color:#5ddcc9;&quot;>IELTS Beta</span>'">
