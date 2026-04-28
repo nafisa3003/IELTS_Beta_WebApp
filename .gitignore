@@ -10,3 +10,6 @@ chatbot/checkpoint.db
 # OS
 .DS_Store
 Thumbs.db
+
+.env
+assets/js/firebase-init.js
