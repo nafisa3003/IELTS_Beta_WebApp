@@ -36,9 +36,9 @@ if ($user) {
   <script src="/ielts_beta_v3/assets/js/firebase-init.js"></script>
   <script src="/ielts_beta_v3/assets/js/globals.js?v=1.1"></script>
 
-  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/globals.css">
+  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/globals.css?v=1.4">
   <?php foreach ($extra_css as $css): ?>
-  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/<?= htmlspecialchars($css) ?>">
+  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/<?= htmlspecialchars($css) ?>?v=1.4">
   <?php endforeach; ?>
 </head>
 <body class="<?= htmlspecialchars($body_class) ?>">

@@ -59,17 +59,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-toggle');
+const closeBtn = document.getElementById('sb-close');
 const sidebar = document.getElementById('sidebar');
 
-if (menuBtn && sidebar) {
-  menuBtn.onclick = (e) => {
-    e.stopPropagation();
-    sidebar.classList.toggle('show');
-  };
+  if (sidebar) {
+  if (menuBtn) {
+    menuBtn.onclick = (e) => {
+      e.stopPropagation();
+      sidebar.classList.add('show');
+    };
+  }
 
-  document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+  if (closeBtn) {
+    closeBtn.onclick = (e) => {
+      e.stopPropagation();
       sidebar.classList.remove('show');
+    };
+  }
+}
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && (!menuBtn ||
+         !menuBtn.contains(e.target))) {
+        sidebar.classList.remove('show');
+  }
+  });
+
+// Firebase Sidebar Sync
+if (typeof firebase !== 'undefined') {
+  firebase.auth().onAuthStateChanged(user => {
+    const nameEl = document.getElementById('sb-uname');
+    const roleEl = document.getElementById('sb-urole');
+    const avEl = document.getElementById('sb-av');
+
+    if (user && nameEl) {
+      nameEl.textContent = user.displayName || 'IELTS Learner';
+      roleEl.textContent = 'Syncing goal...';
+
+      // Fetch extra data from our PHP API if needed
+      fetch('/ielts_beta_v3/api/user.php?action=get_profile')
+        .then(res => res.json())
+        .then(data => {
+          if (data.target_band) {
+            roleEl.textContent = `Band ${data.target_band} goal`;
+          }
+        }).catch(() => {
+          roleEl.textContent = 'IELTS Candidate';
+        });
+
+      if (user.displayName) {
+        const p = user.displayName.split(' ');
+        avEl.textContent = p[0][0] + (p[1] ? p[1][0] : '');
+      }
     }
   });
 }

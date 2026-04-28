@@ -80,7 +80,7 @@ select, input, button { font-family: inherit; }
     font-size: 28px;
     cursor: pointer;
     margin-right: 15px;
-    z-index: 1100;
+    z-index: 100;
     line-height: 1;
 }
 
@@ -170,6 +170,7 @@ select.fi { cursor: pointer; }
 }
 .sb-logo { padding: 0 18px 18px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
 .sb-logo-img { height: 36px; width: auto; }
+.sb-close { display: none; }
 .sb-sec {
   font-size: 10px; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; color: var(--text3);
@@ -307,13 +308,32 @@ select.fi { cursor: pointer; }
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
     box-shadow: 10px 0 40px rgba(0,0,0,0.4);
     background: var(--white);
-    padding: 20px 0;
+    padding: 0;
 }
 
 .sidebar.show { transform: translateX(0); }
 
+.sb-logo { 
+    display: flex !important; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px 18px;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+}
+
+.sb-close {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text3);
+    cursor: pointer;
+}
+
+.sb-close:hover { color: var(--red); }
 /* Reset displays inside the mobile sidebar when shown */
-.sidebar.show .sb-logo,
 .sidebar.show .sb-logo-img,
 .sidebar.show .sb-sec,
 .sidebar.show .sb-link,
