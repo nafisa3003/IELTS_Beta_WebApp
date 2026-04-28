@@ -294,7 +294,7 @@ select.fi { cursor: pointer; }
 
   .topbar-right .tnav:not(.cta) { display: none; }
 
-.app-main { margin-left: 0; padding: 12px; width: 100%; }
+.app-main { margin-left: 0; padding: 16px; width: 100%; }
 
 .sidebar { 
     display: flex !important;
@@ -311,7 +311,7 @@ select.fi { cursor: pointer; }
     padding: 0;
 }
 
-.sidebar.show { transform: translateX(0); }
+.sidebar.show { transform: translateX(0) !important; }
 
 .sb-logo { 
     display: flex !important; 

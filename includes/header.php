@@ -30,30 +30,29 @@ if ($user) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   
-  <!-- Firebase (Global) -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-  <script src="/ielts_beta_v3/assets/js/firebase-init.js"></script>
-  <script src="/ielts_beta_v3/assets/js/globals.js?v=1.1"></script>
-
-  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/globals.css?v=1.4">
-  <?php foreach ($extra_css as $css): ?>
-  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/<?= htmlspecialchars($css) ?>?v=1.4">
-  <?php endforeach; ?>
-
   <script>
-  // Firebase Config from PHP (env.php)
+  // Firebase Config from PHP (env.php) - MUST be defined before firebase-init.js
   window.firebaseConfig = {
     apiKey: "<?= defined('FIREBASE_API_KEY') ? FIREBASE_API_KEY : '' ?>",
     authDomain: "<?= defined('FIREBASE_AUTH_DOMAIN') ? FIREBASE_AUTH_DOMAIN : '' ?>",
     projectId: "<?= defined('FIREBASE_PROJECT_ID') ? FIREBASE_PROJECT_ID : '' ?>",
     appId: "<?= defined('FIREBASE_APP_ID') ? FIREBASE_APP_ID : '' ?>",
-    // Optional fields if you have them in env.php
+
     storageBucket: "<?= defined('FIREBASE_STORAGE_BUCKET') ? FIREBASE_STORAGE_BUCKET : '' ?>",
     messagingSenderId: "<?= defined('FIREBASE_MESSAGING_SENDER_ID') ? FIREBASE_MESSAGING_SENDER_ID : '' ?>",
     measurementId: "<?= defined('FIREBASE_MEASUREMENT_ID') ? FIREBASE_MEASUREMENT_ID : '' ?>"
   };
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="/ielts_beta_v3/assets/js/firebase-init.js?v=1.6"></script>
+<script src="/ielts_beta_v3/assets/js/globals.js?v=1.6"></script>
+
+<link rel="stylesheet" href="/ielts_beta_v3/assets/css/globals.css?v=1.6">
+<?php foreach ($extra_css as $css): ?>
+  <link rel="stylesheet" href="/ielts_beta_v3/assets/css/<?= htmlspecialchars($css) ?>?v=1.6">
+<?php endforeach; ?>
 </head>
 <body class="<?= htmlspecialchars($body_class) ?>">
 <div id="toast-container"></div>

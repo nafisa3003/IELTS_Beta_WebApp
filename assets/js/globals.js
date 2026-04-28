@@ -62,27 +62,30 @@ const menuBtn = document.getElementById('menu-toggle');
 const closeBtn = document.getElementById('sb-close');
 const sidebar = document.getElementById('sidebar');
 
-  if (sidebar) {
-  if (menuBtn) {
-    menuBtn.onclick = (e) => {
-      e.stopPropagation();
-      sidebar.classList.add('show');
-    };
-  }
+if (sidebar && menuBtn) {
+  menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    sidebar.classList.add('show');
+  });
+}
 
   if (closeBtn) {
     closeBtn.onclick = (e) => {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
       e.stopPropagation();
       sidebar.classList.remove('show');
-    };
+    });
   }
 }
   document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && (!menuBtn ||
-         !menuBtn.contains(e.target))) {
-        sidebar.classList.remove('show');
+    if (sidebar.classList.contains('show')) {
+  if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+    sidebar.classList.remove('show');
   }
-  });
+}
+});
 
 // Firebase Sidebar Sync
 if (typeof firebase !== 'undefined') {
