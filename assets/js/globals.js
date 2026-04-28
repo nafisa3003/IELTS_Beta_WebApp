@@ -58,19 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Mobile Menu Toggle
-  const menuBtn = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
+const menuBtn = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
 
-  if (menuBtn && sidebar) {
-    menuBtn.onclick = (e) => {
-      e.stopPropagation();
-      sidebar.classList.toggle('show');
-    };
-      
-      document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && !menuBtn.contains(e.target))
-         {
-          sidebar.classList.remove('show');
-        }
-      });
-  }
+if (menuBtn && sidebar) {
+  menuBtn.onclick = (e) => {
+    e.stopPropagation();
+    sidebar.classList.toggle('show');
+  };
+
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      sidebar.classList.remove('show');
+    }
+  });
+}

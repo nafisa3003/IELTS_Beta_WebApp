@@ -72,6 +72,18 @@ select, input, button { font-family: inherit; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .logo-img { height: 42px; width: auto; cursor: pointer; z-index: 10; }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
+    z-index: 1100;
+    line-height: 1;
+}
+
 .top-nav { 
   display: flex; align-items: center; gap: 4px; flex-wrap: nowrap;
   position: absolute; left: 50%; transform: translateX(-50%);
@@ -277,19 +289,57 @@ select.fi { cursor: pointer; }
 
 @media (max-width: 640px) {
   .menu-toggle { display: block !important; }
-  .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
-  .app-main { margin-left: 0; padding: 12px; }
-  .sidebar { 
-      display: flex; 
-      transform: translateX(-100%); 
-      width: 260px; 
-      transition: transform 0.3s ease; 
-      box-shadow: 10px 0 30px rgba(0,0,0,0.2);
-      }
-      .sidebar.show { transform: translateX(0); }
-      .sb-link span:not(.sb-icon):not(.sb-badge),
-      .sb-logo-img, .sb-sec,
-      .sb-user .uname, .sb-user .urole { display: flex !important; }
-      .sb-link { justify-content: flex-start; }
-      .top-nav { display: none !important; }
+  .top-nav { display: none !important; } 
+
+  .topbar-right .tnav:not(.cta) { display: none; }
+
+.app-main { margin-left: 0; padding: 12px; width: 100%; }
+
+.sidebar { 
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 280px !important;
+    transform: translateX(-100%); 
+    z-index: 2000 !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    box-shadow: 10px 0 40px rgba(0,0,0,0.4);
+    background: var(--white);
+    padding: 20px 0;
 }
+
+.sidebar.show { transform: translateX(0); }
+
+/* Reset displays inside the mobile sidebar when shown */
+.sidebar.show .sb-logo,
+.sidebar.show .sb-logo-img,
+.sidebar.show .sb-sec,
+.sidebar.show .sb-link,
+.sidebar.show .sb-link span,
+.sidebar.show .sb-user,
+.sidebar.show .sb-user div { 
+    display: flex !important; 
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.sidebar.show .sb-link { 
+    justify-content: flex-start !important; 
+    padding: 12px 20px !important;
+}
+
+.sidebar.show .sb-icon { 
+    display: inline-block !important;
+    margin-right: 12px !important;
+}
+      
+  .sidebar.show .sb-link span:not(.sb-icon):not(.sb-badge),
+  .sidebar.show .sb-logo-img, 
+  .sidebar.show .sb-sec,
+  .sidebar.show .sb-user .uname, 
+  .sidebar.show .sb-user .urole { display: inline-block !important; }
+   
+  .sidebar.show .sb-link { justify-content: flex-start; }
+  }
