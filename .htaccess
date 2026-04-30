@@ -1,1 +1,2 @@
 DirectoryIndex pages/home.php
+ErrorDocument 404 /ielts_beta/pages/404.php
