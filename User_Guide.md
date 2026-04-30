@@ -5,11 +5,15 @@ Welcome to **IELTS Beta**! This guide is designed for students and preparation s
 ---
 
 ## 🚀 1. The Journey Begins: Landing Page
-![Landing Page](./screenshots/home.png)
+![Landing Page 1](./screenshots/landingpage1.png)
+![Landing Page 2](./screenshots/landingpage2.png)
+![Landing Page 3](./screenshots/landingpage3.png)
 The Landing Page is your first stop. Here you can see an overview of our features, current statistics of successful students, and quick links to get started.
 - **Get Started:** Click the main button to jump straight into the login or signup flow.
 - **Explore Features:** Scroll down to see what makes our AI Tutor and Mock Tests different.
-
+- **Theme:** Toggle theme option to switch between the dark and light themes of your choice.
+![Light Theme toggle](./screenshots/light.png)
+![Dark Theme Toggle](./screenshots/dark.png)
 ---
 
 ## 🔐 2. Joining & Accessing
@@ -24,7 +28,7 @@ Access your personalized study space. If you used Google to sign up, simply clic
 - **Stay Logged In:** The platform remembers your session so you don't have to log in every time.
 
 ### **Forgot Password?**
-![Forgot Password](./screenshots/forgot-password.png)
+![Forgot Password](./screenshots/forgotpassword.png)
 If you forget your password, click the "Forgot Password?" link on the login page. Enter your email, and we will send you a secure link to reset it.
 
 ---
@@ -45,18 +49,22 @@ Focus on specific areas of the IELTS exam. Each module (Speaking, Writing, Readi
 
 ### **AI Tutor (24/7 Expert)**
 ![AI Tutor](./screenshots/chatbot.png)
+![AI Tutor](./screenshots/chatbot2.png)
 Chat with our intelligent tutor. 
 - **Essay Grading:** Paste your Task 2 essays for instant feedback.
 - **Live Search:** Ask about "Latest test fees in my city" or "Next test dates" — the AI searches the web for you!
 
 ### **Vocabulary Word Bank (Flashcards)**
-![Flashcards Page](./screenshots/flashcards.png)
-Master over 200+ academic words. 
-- **3D Interactive Cards:** Click to flip and see definitions.
-- **Create Your Own:** Add custom words you encounter during your reading.
+![Flashcards Page 1](./screenshots/flashcards1.png)
+![Flashcards Page 2](./screenshots/flashcards2.png)
+![Flashcards Page 3](./screenshots/flashcards3.png)
+![Flashcards Page 4](./screenshots/flashcards4.png)
+Master over 180+ academic words. 
+- **3D Interactive Cards:** Click to flip and see definitions & examples. Categorized with 3 difficulty levels (EASY-MEDIUM-HARD) and ordered alphabetically, with a ‘Search words’ bar and pagination. 
+- **Create Your Own:** Create, Read, Update, Delete (CRUD) custom words you encounter during your reading.
 
 ### **Cambridge Resources**
-![Cambridge Resources](./screenshots/cambridge.png)
+![Cambridge Resources](./screenshots/resource.png)
 Access a curated library of official Cambridge preparation materials, including PDFs, audio files, and practice books.
 
 ---
@@ -66,30 +74,31 @@ Access a curated library of official Cambridge preparation materials, including 
 ![Mock Tests](./screenshots/mock-tests.png)
 Choose from a variety of full-length mock tests. These are designed to mimic the difficulty of the actual exam.
 
-### **Taking the Test**
-![Take Test](./screenshots/take-test.png)
-Enter a distraction-free testing environment. A timer helps you manage your pace, just like the real exam.
-
-### **Instant Results**
-![Test Results](./screenshots/test-result.png)
-Immediately after finishing, see your estimated band score and a breakdown of which questions you got right or wrong.
-
 ---
 
 ## 👤 6. Managing Your Profile
-![Profile](./screenshots/profile.png)
-Update your personal details, change your profile picture, or adjust your target band score as you improve.
+![Profile 1](./screenshots/profile1.png)
+![Profile 2](./screenshots/profile2.png)
+![Profile 3](./screenshots/profile3.png)
+Update your personal details, or adjust your target band score as you improve.
 - **Achievements:** View badges you've earned for consistent study and high scores.
 
 ---
 
-## 🚪 7. Logging Out
+## 🚪 7. Sign Out
+![Sign Out](./screenshots/signOut.png)
 To keep your data secure, especially on shared computers, always remember to Log Out. You can find the Logout button at the bottom of the sidebar or inside your Profile menu.
 
 ---
 
+##  404 - Page Not Found
+![404 Page Not Found](./screenshots/404.png)
+
+---
+
 ## 📱 8. Mobile & Tablet Experience
-![Mobile View](./screenshots/mobile-responsive.png)
+![Mobile View](./screenshots/mobile1.png)
+![Mobile View](./screenshots/mobile2.png)
 IELTS Beta is built to be **fully responsive**. You can study on the go!
 - **Adaptive Layout:** On screens smaller than **980px**, the sidebar collapses into a convenient mobile menu.
 - **Touch Friendly:** All 3D flashcards and interactive elements are optimized for tapping and swiping on tablets and smartphones.

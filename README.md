@@ -44,7 +44,7 @@ IELTS Beta is a comprehensive, full-stack preparation platform that combines tra
 
 | Dashboard | AI Tutor | Flashcards |
 |:---:|:---:|:---:|
-| ![Dashboard](./screenshots/dashboard-thumb.png) | ![Chatbot](./screenshots/chatbot-thumb.png) | ![Cards](./screenshots/cards-thumb.png) |
+| ![Dashboard](./screenshots/dashboard.png) | ![Chatbot](./screenshots/chatbot.png) | ![Cards](./screenshots/flashcard1.png) |
 
 ---
 
